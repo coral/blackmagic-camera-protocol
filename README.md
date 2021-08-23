@@ -1,6 +1,4 @@
-# Blackmagic Camera Control Protocol
-
-## Now in a machine-readable format
+# Blackmagic Camera Control Protocol - Now in a machine-readable format
 
 The Blackmagic line of cameras are extremely powerful for the price. Especially considering their ability to be controlled both over SDI and Bluetooth, making this a very fun camera to use in situations where you need absolute control.
 
