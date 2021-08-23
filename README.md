@@ -2,7 +2,9 @@
 
 The Blackmagic line of cameras are extremely powerful for the price. Especially considering their ability to be controlled both over SDI and Bluetooth, making this a very fun camera to use in situations where you need absolute control.
 
-This repo contains a machine-readable file called `PROTOCOL.json` which you can use to build your own application around the camera. `PROTOCOL.json` contains both the documentation of the parameters from both PDFs (camera protocol & pocket cameras) + information about the bluetooth services. This is a small example of how the file is structured:
+This repo contains a machine-readable file called `PROTOCOL.json` which you can use to build your own application around the camera. It supplements the [Blackmagic Camera Control PDF](https://documents.blackmagicdesign.com/DeveloperManuals/BlackmagicCameraControl.pdf?_v=1539929000000). This should work for the Blackmagic Pocket Cinema Camera range, URSA range and Studio camera.
+
+`PROTOCOL.json` contains both the documentation of the parameters from both PDFs (camera protocol & pocket cameras) + information about the bluetooth services. The format of the data in the protocol is little endian. This is a small example of how the file is structured:
 
 ```json
 {

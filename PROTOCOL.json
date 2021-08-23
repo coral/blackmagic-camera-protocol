@@ -203,7 +203,7 @@
 					"group": "Video",
 					"group_id": 1,
 					"parameter": "Dynamic Range Mode",
-					"type": "int8 enum",
+					"type": "int8",
 					"index": [],
 					"minimum": 0,
 					"maximum": 2,
@@ -214,7 +214,7 @@
 					"group": "Video",
 					"group_id": 1,
 					"parameter": "Video sharpening level",
-					"type": "int8 enum",
+					"type": "int8",
 					"index": [],
 					"minimum": 0,
 					"maximum": 3,
@@ -404,7 +404,7 @@
 					"group": "Output",
 					"group_id": 3,
 					"parameter": "Overlay enables",
-					"type": "uint16 bit field",
+					"type": "uint16_bit_field",
 					"index": [],
 					"interpretation": "bit flags:\n[0] = display status,\n[1] = display frame guides\nSome cameras don't allow separate control of frame guides and status overlays."
 				},
@@ -469,7 +469,7 @@
 					"group": "Display",
 					"group_id": 4,
 					"parameter": "Exposure and focus tools",
-					"type": "int16 bit field",
+					"type": "int16_bit_field",
 					"index": [
 						"0x1 = zebra,\n0x2 = focus assist, 0x4 = false color"
 					],
@@ -580,7 +580,7 @@
 					"group": "Reference",
 					"group_id": 6,
 					"parameter": "Source",
-					"type": "int8 enum",
+					"type": "int8",
 					"index": [],
 					"minimum": 0,
 					"maximum": 2,
@@ -743,7 +743,7 @@
 					"group": "Media",
 					"group_id": 10,
 					"parameter": "Codec",
-					"type": "int8 enum",
+					"type": "int8",
 					"index": ["basic codec", "code variant"],
 					"interpretation": "Blackmagic RAW: 0 = Q0,\n1 = Q5,\n2 = 3:1,\n3 = 5:1,\n4 = 8:1,\n5 = 12:1"
 				},
@@ -767,7 +767,7 @@
 					"group": "Media",
 					"group_id": 10,
 					"parameter": "Playback Control",
-					"type": "int8 enum",
+					"type": "int8",
 					"index": ["clip"],
 					"interpretation": "0 = Previous,\n1 = Next"
 				},
@@ -803,7 +803,7 @@
 					"group": "PTZ Control",
 					"group_id": 11,
 					"parameter": "Memory Preset",
-					"type": "int8 enum",
+					"type": "int8",
 					"index": ["preset command", "=\npreset slot"],
 					"interpretation": "0 = reset,\n1 = store location, 2 = recall location",
 					"minimum": 0,
@@ -831,7 +831,7 @@
 					"group": "Metadata",
 					"group_id": 12,
 					"parameter": "Scene Tags",
-					"type": "signed byte",
+					"type": "int8",
 					"index": [
 						"scene tags",
 						"interior / exterior",
@@ -852,8 +852,10 @@
 					"group": "Metadata",
 					"group_id": 12,
 					"parameter": "Take",
-					"type": "signed byte",
+					"type": "int8",
 					"index": ["take number", "take tags"],
+					"minimum": 1,
+					"maximum": 99,
 					"interpretation": "1 = None\n0 = PU\n1 = VFX\n2 = SER"
 				},
 				{
@@ -941,7 +943,7 @@
 					"group": "Metadata",
 					"group_id": 12,
 					"parameter": "Slate Mode",
-					"type": "signed byte",
+					"type": "int8",
 					"index": ["type"],
 					"interpretation": "0 = Recording\n1 = Playback"
 				}
