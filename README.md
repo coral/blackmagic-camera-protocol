@@ -4,42 +4,42 @@
 
 The Blackmagic line of cameras are extremely powerful for the price. Especially considering their ability to be controlled both over SDI and Bluetooth, making this a very fun camera to use in situations where you need absolute control.
 
-This repo contains a machine-readable file called `PROTOCOL.json` which you can use to build your own application around the camera. This is a small example of how the file is structured:
+This repo contains a machine-readable file called `PROTOCOL.json` which you can use to build your own application around the camera. `PROTOCOL.json` contains both the documentation of the parameters from both PDFs (camera protocol & pocket cameras) + information about the bluetooth services. This is a small example of how the file is structured:
 
 ```json
 {
-	"information": "", //General information about the file
+	"information": "",
 	"groups": [
 		{
-			"name": "Lens", // Group name
-			"normalized_name": "lens", //Normalized name (snake case)
-			"id": 0, //Group id
+			"name": "Lens",
+			"normalized_name": "lens",
+			"id": 0,
 			"parameters": [
 				{
-					"id": 0, //Parameter id
-					"group": "Lens", //Group name (easy reverse lookup)
-					"group_id": 0, //Group id (easy reverse lookup)
-					"parameter": "Focus", //Parameter name
-					"type": "fixed16", //Type
-					"index": [], //Index map of paginated settings
-					"minimum": 0, //Min
-					"maximum": 1, //Max
-					"interpretation": "0.0 = near, 1.0 = far" //Info from manual
+					"id": 0,
+					"group": "Lens",
+					"group_id": 0,
+					"parameter": "Focus",
+					"type": "fixed16",
+					"index": [],
+					"minimum": 0,
+					"maximum": 1,
+					"interpretation": "0.0 = near, 1.0 = far"
 				}
 			]
 		}
 	],
 	"bluetooth_services": [
 		{
-			"name": "Blackmagic Camera Service", //Name of service
-			"normalized_name": "blackmagic_camera_service", //Normalized (snake_case)
-			"uuid": "291d567a-6d75-11e6-8b77-86f30ca893d3", //UUID of service
+			"name": "Blackmagic Camera Service",
+			"normalized_name": "blackmagic_camera_service",
+			"uuid": "291d567a-6d75-11e6-8b77-86f30ca893d3",
 			"characteristics": [
 				{
-					"name": "Outgoing Camera Control", //Name of characteristics
-					"normalized_name": "outgoing_camera_control", //Normalized (snake_case)
-					"uuid": "5dd3465f-1aee-4299-8493-d2eca2f8e1bb", //UUID of characteristics
-					"description": "Send Camera Control messages" //Description from manual
+					"name": "Outgoing Camera Control",
+					"normalized_name": "outgoing_camera_control",
+					"uuid": "5dd3465f-1aee-4299-8493-d2eca2f8e1bb",
+					"description": "Send Camera Control messages"
 				}
 			]
 		}
