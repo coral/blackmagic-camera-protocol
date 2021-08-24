@@ -1037,18 +1037,18 @@
 		{
 			"name": "Device Information Service",
 			"normalized_name": "device_information_service",
-			"uuid": "180a",
+			"uuid": "0000180a-0000-1000-8000-00805f9b34fb",
 			"characteristics": [
 				{
 					"name": "Camera Manufacturer",
 					"normalized_name": "camera_manufacturer",
-					"uuid": "2a29",
+					"uuid": "00002a29-0000-1000-8000-00805f9b34fb",
 					"description": "Read the name of the manufacturer (always “Blackmagic Design”)"
 				},
 				{
 					"name": "Camera Model",
 					"normalized_name": "camera_model",
-					"uuid": "2a24",
+					"uuid": "00002a24-0000-1000-8000-00805f9b34fb",
 					"description": "Read the name of the camera model (eg. “URSA Mini Pro”)"
 				}
 			]
